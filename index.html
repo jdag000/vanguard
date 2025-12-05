@@ -3,76 +3,138 @@
 <head>
     <meta charset="UTF-8">
 <!-- ADD META TAG REQUIRED TO MAKE PAGE RESPONSIVE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Vaanguard- Leading the Future of Success. Premier strategic investment and business acceleration firm for high-growth enterprises.">
     <meta name="keywords" content="business growth, strategic investment, mergers, corporate consulting, digital transformation">
 <!-- ADD META TAG FOR AUTHOR AND YOUR NAME-->
+    <meta name="author" content="Judy Dagdagan">
     <title>Vanguard | Leading the Future of Success</title>
 <!-- ADD LINK TO YOUR CSS-->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <!-- WRAP CONTENT IN VALIDATED, SEMANTIC HTML5 (SEE HINTS FOLDER LINKED TO IN THE CANVAS INSTRUCTIONS)-->
-    Vaanguard
-        Main Navigation
-            About
-            Services
-            Contact
+    <header>
+        <h1>Vanguard</h1>
+        <nav>
+            <h2>Main Navigation></h2>
 
-        Innovation & Investment
-        We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
-        Request a Consultation
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle"><span></span></label>
 
-        Our Expertise. Your Edge.
-        We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.'
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        What We Offer
-            Strategic Growth Consulting
-            Unlock new revenue streams and optimize market expansion strategies.
+    <main>
+        <section id="hero">
+        <h2>Innovation & Investment</h2>
+        <p>
+            We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.
+            Request a Consultation
+        </p>
+        <a href="#contact" class="btn-primary">Request a Consultation</a>
+        </section>
 
-            High-Impact Investment Solutions
-            Maximize returns with data-driven portfolio management.
+        <section id="about">
+        <h2>Our Expertise. Your Edge.</h2>
+            <p>
+            We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.
+            </p>
+        </section>
 
-            Business Acceleration & Mergers
-            Identify opportunities for rapid growth and high-value acquisitions.
+        <section id="services">
+            <h2>What We Offer</h2>
 
-            Digital Transformation
-            Stay at the forefront of industry advancements with AI, blockchain, and automation.
+            <article>
+                <h3>Strategic Growth Consulting</h3>
+                <p>Unlock new revenue streams and optimize market expansion strategies.</p>
+            </article>
 
-            Exclusive Executive Advisory Services
-            Personalized insights and leadership support for C-suite executives and high-net-worth investors.
+            <article>
+                <h3>High-Impact Investment Solutions</h3>
+                <p>Maximize returns with data-driven portfolio management.</p>
+            </article>
 
-            Corporate Innovation
-            Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.
+            <article>
+                <h3>Business Acceleration & Mergers</h3>
+                <p>Identify opportunities for rapid growth and high-value acquisitions.</p>
+            </article>
 
-            Proven Results
-            Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.
+            <article>
+                <h3>Digital Transformation</h3>
+                <p>Stay at the forefront of industry advancements with AI, blockchain, and automation.</p>
+            </article>
 
-                Profits
-                Year
-                Revenue ($M)
-                Growth (%)
+            <article>
+                <h3>Exclusive Executive Advisory Services</h3>>
+                <p>Personalized insights and leadership support for C-suite executives and high-net-worth investors.</p>
+            </article>
 
-                2020
-                $120M
-                30%
+            <article>
+                <h3>Corporate Innovation</h3>
+                <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
+            </article>
+        </section>
 
-                2021
-                $180M
-                50%
+        <section id="results">
+            <h2>Proven Results</h2>
+            <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
 
-                2022
-                $250M
-                70%
+                <section>
+                <h3>Profits</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Revenue ($M)</th>
+                            <th>Growth (%)</th>
+                        </tr>
+                    </thead>
 
-                2023
-                $340M
-                85%
+                    <tbody>
+                        <tr>
+                            <th>2020</th>
+                            <td>$120M</td>
+                            <td>30%</td>
+                        </tr>
 
-                2024
-                $420M
-                100%
+                        <tr>
+                            <th>2021</th>
+                            <td>$180M</td>
+                            <td>50%</td>
+                        </tr>
 
-                Growth
+                        <tr>
+                            <th>2022</th>
+                            <td>$250M</td>
+                            <td>70%</td>
+                        </tr>
+
+                        <tr>
+                            <th>2023</th>
+                            <td>$340M</td>
+                            <td>85%</td>
+                        </tr>
+
+                        <tr>
+                            <th>2024</th>
+                            <td>$420M</td>
+                            <td>100%</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </section>
+        
+        <section>
+            <h3>Growth</h3>
 <!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
                     <div  id="bar-chart">
                         <div class="bar" data-year="2020" style="--height: 30%;"></div>
@@ -81,22 +143,37 @@
                         <div class="bar" data-year="2023" style="--height: 85%;"></div>
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
+        </section>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-        Contact Us
-        Want to take your business to the next level? Get in touch with our elite team today.
+             <form action="contact-form-handler.php" method="POST">
 
-            Full Name
+                <label>Full Name<input type="text" name="full-name" required></label>
 
-            Email Address
+                <label>Email Address<input type="email" name="email" required></label>
 
-            Company Name
+                <label>Company Name<input type="text" name="company"></label>
 
-            Industry
+                <label>Industry<input type="text" name="industry"></label>
 
-            How can we help you?
+                <label>How can we help you?
+                    <textarea name="message" rows="5"></textarea>
+                </label>
 
-            Submit
+                <button type="submit" class="btn-primary">Submit</button>
 
-        For educational purposes only. 
-        Email: info@vaanguard.com 
-        Phone: 480.123.4567
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>For educational purposes only. </p>
+        <p>Email: info@vaanguard.com</p>
+        <p>Phone: 480.123.4567</p>
+    </footer>
+</body>
+</html>
