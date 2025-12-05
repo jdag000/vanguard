@@ -71,7 +71,7 @@ html, body {
 
 body {
     font-family: Inter;
-    background-color: var(--charcoal);
+    background-color: var(--white);
     color: var(--white);
 }
 
@@ -192,7 +192,7 @@ nav input[type="checkbox"]:checked ~ ul {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     margin: 1rem;
-    border-radius: 999px;
+    border-radius: 10px;
     background-color: var(--blue);
     color: var(--white);
     font-weight: 600;
@@ -200,8 +200,92 @@ nav input[type="checkbox"]:checked ~ ul {
     border: none;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    background-color: var(--blue)
+}
+
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hero h2 {
+    font-size: 1.6rem;
+    margin-bottom:0.75rem;
+}
+
+#hero p{
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+#about{
+    background-color: var(--white);
+    color: var(--charcoal);
+}
+
+#about h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+#services {
+    background-color: var(--white);
+    color: var(--charcoal);
+}
+
+#services h2{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#services article {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#services h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#results {
+    background-color: var(--blue);
+}
+
+#results > p{
+    margin-bottom: 1.25rem;
+}
+
+#results table {
+    width: 100%;
+    background-color: var(--black);
+    font-size: 14px;
+}
+
+#results thead{
+    background-color: var(--black);
+}
+
+#results tbody tr:nth-child(odd){
+    background-color: var(--charcoal);
+}
+
+
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
