@@ -162,6 +162,45 @@ nav ul {
     right: 16px;
     top: 3.25rem;
     background-color: var(--black);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform 0.25s ease;
+    min-width: 160px;
+    z-index: 10;
+}
+
+nav li a{
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav li a:hover{
+    background-color: var(--blue);
+}
+
+nav input[type="checkbox"]:checked ~ ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.btn-primary{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem;
+    border-radius: 999px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
