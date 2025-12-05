@@ -129,6 +129,40 @@ nav label{
     display: flex;
     align-items: center;
 }
+
+nav label span,
+nav label span::before,
+nav label span::after {
+    display: block;
+    width: 1.6rem;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.3s ease, top 0.3x ease, opacity 0.3s ease;
+}
+
+nav label span::before,
+nav label span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+nav label span::before{
+    top: -6px;
+}
+
+nav label span::after{
+    top: 6px;
+}
+
+nav ul {
+    position: absolute;
+    right: 16px;
+    top: 3.25rem;
+    background-color: var(--black);
+}
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
