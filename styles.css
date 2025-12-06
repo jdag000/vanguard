@@ -267,6 +267,7 @@ nav input:checked ~ label span::after {
 #about h2 {
     font-size: 32px;
     margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
 }
 
 p {
@@ -282,6 +283,7 @@ p {
 #services h2{
     font-size: 32px;
     margin-bottom: 2rem;
+    padding-left: 1.5rem;
 }
 
 #services article {
@@ -305,22 +307,66 @@ p {
     padding: 2rem 0 3rem;
 }
 
+#results .container {
+    width: 90%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#results h2 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+#results h3 {
+    font-size: 32px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+#results p {
+    margin-bottom: 1.5rem;
+}
+
 #results > p{
     margin-bottom: 1.25rem;
 }
 
 #results table {
     width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
     background-color: var(--black);
     font-size: 14px;
 }
 
+#results  th,
+#results td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+#results table,
+#results th,
+#results td {
+    border: 1px solid var(--charcoal);
+}
 #results thead{
     background-color: var(--black);
 }
 
 #results tbody tr:nth-child(odd){
     background-color: var(--charcoal);
+}
+
+#results tbody tr:nth-child(even) {
+    background-color: var(--black)
+}
+
+#growth h3{
+    padding-left: 1.5rem;
+    padding-top: 1rem;
 }
 
 
@@ -412,6 +458,16 @@ p {
     background: var(--black);
 }
 
+#contact h2 {
+    font-size: 32px;
+    padding-top: 2rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+}
+
+#contact p {
+    padding-bottom: 1rem;
+}
 #contact > p {
     margin-bottom: 1rem;
 }
@@ -422,21 +478,21 @@ form{
 }
 
 form label{
+    max-width: 400px;
     display: block;
     font-size: 14px;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1rem;
     color: var(--white);
 }
 
 form input,
 form textarea {
     width: 100%;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
+    padding: 1rem;
     border: 1px solid var(--charcoal);
     background-color: var(--white);
-    color: var(--white)
-    var(--font); 14px;
+    color: var(--white);
+    font-size: 14px;
 }
 
 form input:focus,
@@ -444,16 +500,40 @@ form textarea:focus {
     outline: 2px solid var(--blue);
 }
 
+.btn-submit {
+    display: inline-block;
+    padding: 1rem 0.75rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-submit:hover{
+    background-color: var(--red);
+}
+
 footer {
     background-color: var(--black);
     color: var(--white);
     text-align: center;
     padding: 1.5rem 1rem 2rem;
-    font-size: 0.8rem;
+    font-size: 14px;
 }
 
 footer p + p {
     margin-top: 0.4rem;
+}
+
+footer p {
+    line-height: 1rem;
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
