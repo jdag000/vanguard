@@ -63,7 +63,6 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html, body {
     min-width: 400px; 
@@ -87,6 +86,18 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--blue);
+    box-shadow: 0 0 20px var(--blue);
 }
 
 header h1{
@@ -274,6 +285,23 @@ p {
     line-height: 1.5rem;
 }
 
+h2, h3 {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: dropIn 0.6s ease-out forwards;
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #services {
     background-color: var(--white);
     color: var(--charcoal);
@@ -292,6 +320,11 @@ p {
     padding: 1rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#services article:hover{
+    transform: translateY(-4px);
 }
 
 #services h3 {
@@ -419,7 +452,7 @@ p {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.4s ease-in-out;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -477,7 +510,7 @@ form{
     gap: 0.75rem;
 }
 
-form label{
+form label {
     max-width: 400px;
     display: block;
     font-size: 14px;
@@ -537,6 +570,9 @@ footer p {
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
+
+/* very buggy - turning in what I have before it's due*/
+
 @media (min-width:800px) {
 
     #results {
@@ -553,7 +589,15 @@ footer p {
         width: 50%;
     }
 
-        nav ul {
+
+    #services .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5rem;
+        padding-bottom: 4rem;
+    } 
+
+    nav ul {
         display: flex;
         max-height: none;
         background: none;
@@ -569,6 +613,24 @@ footer p {
     nav label span {
         display: none;
     }
+
+    #contact .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #contact h2,
+    #contact > .container > p,
+    #contact form {
+        max-width: none;
+    }
+
+   #contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+   }
+   
 }
 
 
@@ -579,13 +641,32 @@ footer p {
         padding-inline: 2rem;
     }
 
-    #services .container {
+   #services .container {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 1.5rem;
-    }
+        padding-bottom: 4rem;
+    } 
 
     #services h2 {
         grid-column: 1 /-1;
     }
+
+    #contact form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #contact textarea, 
+    #contact button {
+        grid-column: 1 / -1; 
+    }
+
+    #contact form button {
+        grid-column: 2 / 3;
+    }
+
 }
